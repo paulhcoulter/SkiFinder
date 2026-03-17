@@ -1,0 +1,13 @@
+{
+  "name": "ne-ski-finder",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "scrape": "node scripts/scrape-conditions.js"
+  },
+  "dependencies": {
+    "puppeteer": "^22.0.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  }
+}

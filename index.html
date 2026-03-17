@@ -46,12 +46,20 @@
         </label>
       </section>
 
-      <!-- Live Conditions (shown after Open-Meteo data loads) -->
+      <!-- Live Conditions (shown after conditions.json loads) -->
       <section class="filter-section" id="live-section" style="display:none">
         <h2>Live Conditions</h2>
         <div class="slider-group">
-          <label>Snow Depth (in) <span class="range-display" id="snow-display"></span></label>
+          <label>Base Depth (in) <span class="range-display" id="snow-display"></span></label>
           <div id="slider-snow"></div>
+        </div>
+        <div class="slider-group">
+          <label>Open Runs <span class="range-display" id="runs-open-display"></span></label>
+          <div id="slider-runs-open"></div>
+        </div>
+        <div class="slider-group">
+          <label>Open Lifts <span class="range-display" id="lifts-open-display"></span></label>
+          <div id="slider-lifts-open"></div>
         </div>
       </section>
 

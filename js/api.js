@@ -1,47 +1,47 @@
 // ============================================================
-// api.js — fetch snow depth from Open-Meteo (free, no key)
-// Called directly from the browser — no proxy needed.
-// Open-Meteo docs: https://open-meteo.com/en/docs
+// api.js — loads conditions.json (updated daily by GitHub Actions)
+// Falls back gracefully if the file is empty or unavailable.
 // ============================================================
-
-const OPEN_METEO_BASE = "https://api.open-meteo.com/v1/forecast";
 
 async function loadLiveConditions() {
   try {
-    // Fire all 25 requests in parallel
-    const requests = MOUNTAINS.map(m =>
-      fetch(`${OPEN_METEO_BASE}?latitude=${m.lat}&longitude=${m.lng}&current=snow_depth&timezone=auto`)
-        .then(r => r.ok ? r.json() : Promise.reject(r.status))
-    );
+    const res = await fetch("/conditions.json");
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
-    const results = await Promise.allSettled(requests);
+    const json = await res.json();
+    if (!json.updated || !json.mountains) throw new Error("Empty conditions file");
 
-    let maxSnow = 0;
-    let anySuccess = false;
+    let maxSnow = 0, maxOpenRuns = 0, maxOpenLifts = 0;
+    let anyData = false;
 
-    results.forEach((result, i) => {
-      if (result.status !== "fulfilled") return;
-      const data = result.value;
-      const depthMeters = data?.current?.snow_depth;
-      if (depthMeters == null) return;
+    MOUNTAINS.forEach(m => {
+      const c = json.mountains[m.id];
+      if (!c) return;
 
-      // Convert meters → inches, round to 1 decimal
-      const depthInches = Math.round(depthMeters * 39.3701 * 10) / 10;
-      MOUNTAINS[i].live.snowDepth = depthInches;
-      if (depthInches > maxSnow) maxSnow = depthInches;
-      anySuccess = true;
+      m.live.snowDepth  = c.baseDepth   ?? null;
+      m.live.summitDepth= c.summitDepth ?? null;
+      m.live.recentSnow = c.recentSnow  ?? null;
+      m.live.openRuns   = c.openRuns    ?? null;
+      m.live.openLifts  = c.openLifts   ?? null;
+
+      if (c.baseDepth  != null && c.baseDepth  > maxSnow)      maxSnow      = c.baseDepth;
+      if (c.openRuns   != null && c.openRuns   > maxOpenRuns)   maxOpenRuns  = c.openRuns;
+      if (c.openLifts  != null && c.openLifts  > maxOpenLifts)  maxOpenLifts = c.openLifts;
+      anyData = true;
     });
 
-    if (!anySuccess) throw new Error("All requests failed");
+    if (!anyData) throw new Error("No mountain data in conditions.json");
 
-    initLiveSliders(maxSnow);
+    initLiveSliders(maxSnow, maxOpenRuns, maxOpenLifts);
 
-    const now = new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
-    showStatus(`Snow depth updated at ${now} · Open-Meteo`, "ok");
+    const updated = new Date(json.updated).toLocaleString([], {
+      month: "short", day: "numeric", hour: "2-digit", minute: "2-digit"
+    });
+    showStatus(`Conditions updated ${updated}`, "ok");
 
   } catch (err) {
-    console.warn("Open-Meteo unavailable:", err);
-    showStatus("Live snow depth unavailable — showing static data only", "error");
+    console.warn("Conditions unavailable:", err.message);
+    showStatus("Live conditions not yet available — run the scraper first", "error");
   }
 }
 

@@ -5,7 +5,9 @@
       "WebFetch(domain:en.wikipedia.org)",
       "WebFetch(domain:feeds.snocountry.net)",
       "WebFetch(domain:skiapi.com)",
-      "WebFetch(domain:rapidapi.com)"
+      "WebFetch(domain:rapidapi.com)",
+      "Bash(npm install:*)",
+      "Bash(node:*)"
     ]
   }
 }

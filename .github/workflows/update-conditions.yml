@@ -1,0 +1,36 @@
+name: Update Snow Conditions
+
+on:
+  schedule:
+    - cron: '0 13 * * *'   # 8 AM EST / 9 AM EDT daily
+  workflow_dispatch:         # allow manual trigger from GitHub Actions UI
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Scrape OnTheSnow conditions
+        run: node scripts/scrape-conditions.js
+
+      - name: Commit updated conditions.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add conditions.json
+          git diff --staged --quiet || \
+            git commit -m "chore: update snow conditions [skip ci]" && \
+            git push

@@ -5,8 +5,10 @@
 // Current filter state — ranges mirror slider initial values
 let filterState = {
   passes: { epic: true, ikon: true, independent: true },
-  // Live (populated after Open-Meteo loads)
+  // Live (populated after conditions.json loads)
   snowDepth:   null,  // [min, max] or null = inactive
+  openRuns:    null,
+  openLifts:   null,
   // Static
   runs:        [0, DATA_RANGES.runs.max],
   lifts:       [0, DATA_RANGES.lifts.max],
@@ -103,22 +105,31 @@ function initSliders() {
 }
 
 // ============================================================
-// Live sliders (created after Open-Meteo data arrives)
+// Live sliders (created after conditions.json data arrives)
 // ============================================================
-function initLiveSliders(maxSnow) {
-  const max = Math.max(Math.ceil(maxSnow), 1);
+function initLiveSliders(maxSnow, maxOpenRuns, maxOpenLifts) {
+  function wireLive(sliderEl, stateKey) {
+    sliderEl.noUiSlider.on("update", (values) => {
+      filterState[stateKey] = values.map(Number);
+      applyFilters();
+    });
+  }
 
-  sliders.snowDepth = makeSlider(
-    "slider-snow", 0, max, 1,
-    "snow-display", (lo, hi) => `${lo}" – ${hi}"`
-  );
+  const snowMax  = Math.max(Math.ceil(maxSnow), 1);
+  const runsMax  = Math.max(maxOpenRuns, 1);
+  const liftsMax = Math.max(maxOpenLifts, 1);
 
-  filterState.snowDepth = [0, max];
+  sliders.snowDepth = makeSlider("slider-snow",       0, snowMax,  1, "snow-display",      (lo, hi) => `${lo}" – ${hi}"`);
+  sliders.openRuns  = makeSlider("slider-runs-open",  0, runsMax,  1, "runs-open-display", (lo, hi) => `${lo} – ${hi}`);
+  sliders.openLifts = makeSlider("slider-lifts-open", 0, liftsMax, 1, "lifts-open-display",(lo, hi) => `${lo} – ${hi}`);
 
-  sliders.snowDepth.noUiSlider.on("update", (values) => {
-    filterState.snowDepth = values.map(Number);
-    applyFilters();
-  });
+  filterState.snowDepth = [0, snowMax];
+  filterState.openRuns  = [0, runsMax];
+  filterState.openLifts = [0, liftsMax];
+
+  wireLive(sliders.snowDepth, "snowDepth");
+  wireLive(sliders.openRuns,  "openRuns");
+  wireLive(sliders.openLifts, "openLifts");
 
   document.getElementById("live-section").style.display = "";
   applyFilters();
@@ -158,10 +169,18 @@ function applyFilters() {
     if (m.weekendPrice< fs.weekendPrice[0] || m.weekendPrice> fs.weekendPrice[1]) continue;
     if (m.weekdayPrice< fs.weekdayPrice[0] || m.weekdayPrice> fs.weekdayPrice[1]) continue;
 
-    // Live filter — skip (pass through) if snow depth is null for this mountain
+    // Live filters — fail-open if data is null for this mountain
     if (fs.snowDepth !== null) {
       const v = m.live.snowDepth;
       if (v !== null && (v < fs.snowDepth[0] || v > fs.snowDepth[1])) continue;
+    }
+    if (fs.openRuns !== null) {
+      const v = m.live.openRuns;
+      if (v !== null && (v < fs.openRuns[0] || v > fs.openRuns[1])) continue;
+    }
+    if (fs.openLifts !== null) {
+      const v = m.live.openLifts;
+      if (v !== null && (v < fs.openLifts[0] || v > fs.openLifts[1])) continue;
     }
 
     visibleIds.add(m.id);
@@ -197,10 +216,10 @@ function resetFilters() {
     if (sliders[key]) sliders[key].noUiSlider.set(range);
   });
 
-  // Live slider — reset to full range
-  if (sliders.snowDepth && filterState.snowDepth) {
-    sliders.snowDepth.noUiSlider.set([0, filterState.snowDepth[1]]);
-  }
+  // Live sliders — reset to full range
+  if (sliders.snowDepth && filterState.snowDepth) sliders.snowDepth.noUiSlider.set([0, filterState.snowDepth[1]]);
+  if (sliders.openRuns  && filterState.openRuns)  sliders.openRuns.noUiSlider.set([0, filterState.openRuns[1]]);
+  if (sliders.openLifts && filterState.openLifts) sliders.openLifts.noUiSlider.set([0, filterState.openLifts[1]]);
 
   applyFilters();
 }

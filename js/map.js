@@ -143,10 +143,11 @@ function openDetailPanel(mountain) {
 }
 
 function buildLiveHtml(m) {
-  const snow = m.live.snowDepth;
-  const snowStr = snow !== null
-    ? `<span class="live-val">${snow}"</span>`
-    : `<span class="live-val na">—</span>`;
+  function liveVal(v, unit = "") {
+    return v !== null && v !== undefined
+      ? `<span class="live-val">${v}${unit}</span>`
+      : `<span class="live-val na">—</span>`;
+  }
 
   const conditionsLink = m.conditionsUrl
     ? `<a href="${m.conditionsUrl}" target="_blank" rel="noopener" class="conditions-link">Full conditions &rarr;</a>`
@@ -156,7 +157,11 @@ function buildLiveHtml(m) {
     <hr class="detail-divider" />
     <div class="live-conditions">
       <h4>Live Conditions</h4>
-      <div class="live-row"><span>Snow Depth</span>${snowStr}</div>
+      <div class="live-row"><span>Base Depth</span>${liveVal(m.live.snowDepth, '"')}</div>
+      <div class="live-row"><span>Summit Depth</span>${liveVal(m.live.summitDepth, '"')}</div>
+      <div class="live-row"><span>Last 24h Snow</span>${liveVal(m.live.recentSnow, '"')}</div>
+      <div class="live-row"><span>Open Runs</span>${liveVal(m.live.openRuns)}</div>
+      <div class="live-row"><span>Open Lifts</span>${liveVal(m.live.openLifts)}</div>
     </div>
     ${conditionsLink}
   `;
