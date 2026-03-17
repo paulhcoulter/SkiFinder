@@ -1,4 +1,11 @@
-# Netlify configuration — pure static site, no functions needed
+# Netlify configuration — pure static site, no build step needed.
+# PUPPETEER_SKIP_DOWNLOAD prevents Netlify's npm install from
+# downloading Chromium (~170MB) which would blow the build limit.
+# Puppeteer only runs in GitHub Actions, not on Netlify.
 
 [build]
   publish = "."
+  command = ""
+
+[build.environment]
+  PUPPETEER_SKIP_DOWNLOAD = "true"
