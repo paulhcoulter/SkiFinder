@@ -1,0 +1,4 @@
+# Netlify configuration — pure static site, no functions needed
+
+[build]
+  publish = "."

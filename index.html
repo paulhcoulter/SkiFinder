@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New England Ski Mountain Finder</title>
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- noUiSlider -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js"></script>
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- LEFT PANEL -->
+  <aside id="filter-panel">
+
+    <header id="panel-header">
+      <h1>NE Ski Finder</h1>
+      <div id="match-count">25 mountains</div>
+    </header>
+
+    <div id="live-status" class="status-bar hidden"></div>
+
+    <div id="filters">
+
+      <!-- Pass Type -->
+      <section class="filter-section">
+        <h2>Pass Type</h2>
+        <label class="toggle-label">
+          <input type="checkbox" id="toggle-epic" checked />
+          <span class="pass-dot epic"></span> Epic Pass
+        </label>
+        <label class="toggle-label">
+          <input type="checkbox" id="toggle-ikon" checked />
+          <span class="pass-dot ikon"></span> Ikon Pass
+        </label>
+        <label class="toggle-label">
+          <input type="checkbox" id="toggle-independent" checked />
+          <span class="pass-dot independent"></span> Independent
+        </label>
+      </section>
+
+      <!-- Live Conditions (shown after Open-Meteo data loads) -->
+      <section class="filter-section" id="live-section" style="display:none">
+        <h2>Live Conditions</h2>
+        <div class="slider-group">
+          <label>Snow Depth (in) <span class="range-display" id="snow-display"></span></label>
+          <div id="slider-snow"></div>
+        </div>
+      </section>
+
+      <!-- Mountain Stats -->
+      <section class="filter-section">
+        <h2>Mountain Stats</h2>
+        <div class="slider-group">
+          <label>Total Runs <span class="range-display" id="runs-display"></span></label>
+          <div id="slider-runs"></div>
+        </div>
+        <div class="slider-group">
+          <label>Lifts <span class="range-display" id="lifts-display"></span></label>
+          <div id="slider-lifts"></div>
+        </div>
+        <div class="slider-group">
+          <label>Peak Elevation (ft) <span class="range-display" id="peak-display"></span></label>
+          <div id="slider-peak"></div>
+        </div>
+        <div class="slider-group">
+          <label>Vertical Drop (ft) <span class="range-display" id="vertical-display"></span></label>
+          <div id="slider-vertical"></div>
+        </div>
+        <div class="slider-group">
+          <label>Acres <span class="range-display" id="acres-display"></span></label>
+          <div id="slider-acres"></div>
+        </div>
+      </section>
+
+      <!-- Ticket Price -->
+      <section class="filter-section">
+        <h2>Ticket Price</h2>
+        <div class="slider-group">
+          <label>Weekend Price ($) <span class="range-display" id="weekend-display"></span></label>
+          <div id="slider-weekend"></div>
+        </div>
+        <div class="slider-group">
+          <label>Weekday Price ($) <span class="range-display" id="weekday-display"></span></label>
+          <div id="slider-weekday"></div>
+        </div>
+      </section>
+
+      <button id="reset-btn">Reset Filters</button>
+
+    </div><!-- /filters -->
+  </aside>
+
+  <!-- MAP -->
+  <main id="map-container">
+    <div id="map"></div>
+
+    <!-- Detail overlay -->
+    <div id="detail-panel" class="hidden">
+      <button id="detail-close">&times;</button>
+      <div id="detail-content"></div>
+    </div>
+  </main>
+
+  <!-- JS modules -->
+  <script src="js/data.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
