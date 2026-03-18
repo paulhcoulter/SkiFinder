@@ -4,7 +4,7 @@
 
 const PASS_COLORS = {
   epic:        "#0057a8",
-  ikon:        "#c8102e",
+  ikon:        "#a83240",
   independent: "#4a7c4e"
 };
 
@@ -36,8 +36,8 @@ function mountainIcon(mountain) {
     html: svg,
     className: "",
     iconSize:   [size, size],
-    iconAnchor: [size / 2, size],   // tip of base sits on the coordinate
-    tooltipAnchor: [0, -size]
+    iconAnchor: [size / 2, size],
+    tooltipAnchor: [0, -(size - 4)]
   });
 }
 
