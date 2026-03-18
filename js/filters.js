@@ -139,11 +139,10 @@ function initLiveSliders(maxSnow, maxOpenRuns, maxOpenLifts) {
 // Pass checkboxes
 // ============================================================
 function initPassToggles() {
-  ["epic", "ikon", "independent"].forEach(pass => {
-    const el = document.getElementById(`toggle-${pass}`);
-    if (!el) return;
-    el.addEventListener("change", () => {
-      filterState.passes[pass] = el.checked;
+  document.querySelectorAll(".pass-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      btn.classList.toggle("active");
+      filterState.passes[btn.dataset.pass] = btn.classList.contains("active");
       applyFilters();
     });
   });
@@ -194,11 +193,10 @@ function applyFilters() {
 // Reset
 // ============================================================
 function resetFilters() {
-  // Checkboxes
-  ["epic", "ikon", "independent"].forEach(pass => {
-    const el = document.getElementById(`toggle-${pass}`);
-    if (el) el.checked = true;
-    filterState.passes[pass] = true;
+  // Pass buttons
+  document.querySelectorAll(".pass-btn").forEach(btn => {
+    btn.classList.add("active");
+    filterState.passes[btn.dataset.pass] = true;
   });
 
   // Static sliders

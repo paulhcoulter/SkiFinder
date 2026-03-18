@@ -28,6 +28,7 @@
     <header id="panel-header">
       <h1>NE Ski Finder</h1>
       <div id="match-count">25 mountains</div>
+      <button id="sidebar-toggle" title="Hide panel">&#8249;</button>
     </header>
 
     <div id="live-status" class="status-bar hidden"></div>
@@ -37,18 +38,11 @@
       <!-- Pass Type -->
       <section class="filter-section">
         <h2>Pass Type</h2>
-        <label class="toggle-label">
-          <input type="checkbox" id="toggle-epic" checked />
-          <span class="pass-dot epic"></span> Epic Pass
-        </label>
-        <label class="toggle-label">
-          <input type="checkbox" id="toggle-ikon" checked />
-          <span class="pass-dot ikon"></span> Ikon Pass
-        </label>
-        <label class="toggle-label">
-          <input type="checkbox" id="toggle-independent" checked />
-          <span class="pass-dot independent"></span> Independent
-        </label>
+        <div id="pass-toggle-group">
+          <button class="pass-btn active" data-pass="epic">Epic</button>
+          <button class="pass-btn active" data-pass="ikon">Ikon</button>
+          <button class="pass-btn active" data-pass="independent">Indep.</button>
+        </div>
       </section>
 
       <!-- Live Conditions (shown after conditions.json loads) -->
@@ -113,6 +107,7 @@
 
   <!-- MAP -->
   <main id="map-container">
+    <button id="sidebar-show" class="hidden" title="Show panel">&#8250;</button>
     <div id="map"></div>
 
     <!-- Detail overlay -->
