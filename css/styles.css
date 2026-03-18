@@ -298,12 +298,12 @@ body {
 }
 
 #top5-table {
-  width: 100%;
+  width: auto;
   border-collapse: collapse;
 }
 
 #top5-table thead th {
-  padding: 5px 12px;
+  padding: 5px 10px;
   font-size: 10px;
   font-weight: 600;
   text-transform: uppercase;
@@ -314,13 +314,13 @@ body {
   white-space: nowrap;
 }
 
-#top5-table thead th:first-child { width: 28px; text-align: center; }
+#top5-table thead th:first-child { width: 24px; text-align: center; padding-right: 6px; }
 #top5-table thead th:nth-child(5),
 #top5-table thead th:nth-child(6),
 #top5-table thead th:nth-child(7) { text-align: right; }
 
 #top5-table tbody td {
-  padding: 6px 12px;
+  padding: 6px 10px;
   border-bottom: 1px solid var(--border-subtle);
   white-space: nowrap;
   color: var(--text-muted);
