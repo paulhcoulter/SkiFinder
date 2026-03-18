@@ -11,16 +11,34 @@ const PASS_COLORS = {
 // Vertical drop range for marker sizing
 const V_MIN = 245;   // Yawgoo
 const V_MAX = 3050;  // Killington
-const R_MIN = 6;
-const R_MAX = 18;
+const S_MIN = 20;    // min icon size (px)
+const S_MAX = 42;    // max icon size (px)
 
 let map;
-let markerLayer;      // L.LayerGroup for all circle markers
-const markerMap = {}; // id -> L.circleMarker
+let markerLayer;
+const markerMap = {}; // id -> L.marker
 
-function verticalToRadius(vertical) {
+function verticalToSize(vertical) {
   const t = (vertical - V_MIN) / (V_MAX - V_MIN);
-  return R_MIN + t * (R_MAX - R_MIN);
+  return Math.round(S_MIN + t * (S_MAX - S_MIN));
+}
+
+function mountainIcon(mountain) {
+  const size = verticalToSize(mountain.vertical);
+  const color = PASS_COLORS[mountain.pass];
+  const svg = `
+    <svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 100 100">
+      <polygon points="50,4 96,92 4,92" fill="${color}" stroke="white" stroke-width="4" stroke-linejoin="round"/>
+      <polygon points="50,4 66,36 34,36" fill="white" fill-opacity="0.9"/>
+    </svg>`.trim();
+
+  return L.divIcon({
+    html: svg,
+    className: "",
+    iconSize:   [size, size],
+    iconAnchor: [size / 2, size],   // tip of base sits on the coordinate
+    tooltipAnchor: [0, -size]
+  });
 }
 
 function initMap() {
@@ -39,30 +57,23 @@ function initMap() {
 
   // Build all markers
   MOUNTAINS.forEach(m => {
-    const r = verticalToRadius(m.vertical);
-    const circle = L.circleMarker([m.lat, m.lng], {
-      radius: r,
-      fillColor: PASS_COLORS[m.pass],
-      color: "#fff",
-      weight: 1.5,
-      opacity: 1,
-      fillOpacity: 0.85
-    });
+    const size = verticalToSize(m.vertical);
+    const marker = L.marker([m.lat, m.lng], { icon: mountainIcon(m) });
 
-    circle.bindTooltip(m.name, {
+    marker.bindTooltip(m.name, {
       permanent: false,
       direction: "top",
-      offset: [0, -r],
+      offset: [0, -size],
       className: "mountain-tooltip"
     });
 
-    circle.on("click", (e) => {
+    marker.on("click", (e) => {
       L.DomEvent.stopPropagation(e);
       openDetailPanel(m);
     });
 
-    markerMap[m.id] = circle;
-    markerLayer.addLayer(circle);
+    markerMap[m.id] = marker;
+    markerLayer.addLayer(marker);
   });
 
   addLegend();
@@ -192,25 +203,21 @@ function addLegend() {
 
   legend.onAdd = function () {
     const div = L.DomUtil.create("div", "map-legend");
+    function legendMtn(color, size) {
+      return `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 100 100" style="display:inline-block;vertical-align:middle">
+        <polygon points="50,4 96,92 4,92" fill="${color}" stroke="white" stroke-width="4" stroke-linejoin="round"/>
+        <polygon points="50,4 66,36 34,36" fill="white" fill-opacity="0.9"/>
+      </svg>`;
+    }
     div.innerHTML = `
       <strong style="font-size:11px;display:block;margin-bottom:5px;">Pass Type</strong>
-      <div class="legend-item">
-        <span class="legend-dot" style="width:10px;height:10px;background:#0057a8"></span> Epic Pass
-      </div>
-      <div class="legend-item">
-        <span class="legend-dot" style="width:10px;height:10px;background:#c8102e"></span> Ikon Pass
-      </div>
-      <div class="legend-item">
-        <span class="legend-dot" style="width:10px;height:10px;background:#4a7c4e"></span> Independent
-      </div>
+      <div class="legend-item">${legendMtn('#0057a8', 16)} Epic Pass</div>
+      <div class="legend-item">${legendMtn('#c8102e', 16)} Ikon Pass</div>
+      <div class="legend-item">${legendMtn('#4a7c4e', 16)} Independent</div>
       <div style="margin-top:6px;border-top:1px solid #ddd;padding-top:5px;">
         <strong style="font-size:11px;display:block;margin-bottom:4px;">Size = Vertical Drop</strong>
-        <div class="legend-item">
-          <span class="legend-dot" style="width:${R_MIN*2}px;height:${R_MIN*2}px;background:#888;border-radius:50%"></span> ~${V_MIN} ft
-        </div>
-        <div class="legend-item">
-          <span class="legend-dot" style="width:${R_MAX*2}px;height:${R_MAX*2}px;background:#888;border-radius:50%"></span> ~${V_MAX} ft
-        </div>
+        <div class="legend-item">${legendMtn('#888', S_MIN)} ~${V_MIN} ft</div>
+        <div class="legend-item">${legendMtn('#888', S_MAX)} ~${V_MAX} ft</div>
       </div>
     `;
     return div;
