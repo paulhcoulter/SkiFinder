@@ -281,9 +281,9 @@ body {
    ============================================================ */
 #top5-container {
   position: absolute;
-  bottom: 12px;
+  bottom: 36px;
   right: 12px;
-  width: 210px;
+  width: 240px;
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: 10px;
