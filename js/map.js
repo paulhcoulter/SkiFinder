@@ -63,7 +63,7 @@ function initMap() {
     marker.bindTooltip(m.name, {
       permanent: false,
       direction: "top",
-      offset: [0, -size],
+      offset: [0, 4],
       className: "mountain-tooltip"
     });
 
