@@ -194,13 +194,104 @@ body {
    ============================================================ */
 #map-container {
   flex: 1;
+  display: flex;
+  flex-direction: column;
   position: relative;
   overflow: hidden;
 }
 
 #map {
+  flex: 1;
+  min-height: 0;
   width: 100%;
-  height: 100%;
+}
+
+/* ============================================================
+   Top 5 Table
+   ============================================================ */
+#top5-container {
+  flex-shrink: 0;
+  background: rgba(15, 20, 30, 0.92);
+  border-top: 1px solid #333;
+  color: #e0e0e0;
+  font-size: 12px;
+}
+
+#top5-header {
+  padding: 6px 14px 4px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #999;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+#top5-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#top5-table thead th {
+  padding: 4px 12px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #777;
+  text-align: left;
+  border-bottom: 1px solid #2a2a2a;
+  white-space: nowrap;
+}
+
+#top5-table thead th:first-child { width: 28px; text-align: center; }
+#top5-table thead th:nth-child(5),
+#top5-table thead th:nth-child(6),
+#top5-table thead th:nth-child(7) { text-align: right; }
+
+#top5-table tbody td {
+  padding: 5px 12px;
+  border-bottom: 1px solid #1e1e1e;
+  white-space: nowrap;
+}
+
+#top5-table tbody tr:last-child td { border-bottom: none; }
+
+#top5-table tbody tr:hover td { background: rgba(255,255,255,0.04); }
+
+#top5-table tbody td:first-child {
+  text-align: center;
+  color: #555;
+  font-size: 11px;
+}
+
+#top5-table tbody td:nth-child(2) { font-weight: 600; color: #ddd; }
+
+#top5-table tbody td:nth-child(5),
+#top5-table tbody td:nth-child(6),
+#top5-table tbody td:nth-child(7) {
+  text-align: right;
+  font-weight: 700;
+  color: #4fc3f7;
+}
+
+.top5-badge {
+  display: inline-block;
+  padding: 1px 6px;
+  border-radius: 8px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #fff;
+}
+.top5-badge.epic        { background: #0057a8; }
+.top5-badge.ikon        { background: #a83240; }
+.top5-badge.independent { background: #4a7c4e; }
+
+.top5-empty {
+  text-align: center;
+  color: #555;
+  padding: 10px;
+  font-style: italic;
 }
 
 /* ============================================================

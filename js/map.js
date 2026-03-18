@@ -196,6 +196,41 @@ function closeDetailPanel() {
 }
 
 // ============================================================
+// Top 5 table
+// ============================================================
+function updateTopTable(visibleIds) {
+  const tbody = document.getElementById("top5-body");
+  if (!tbody) return;
+
+  const passLabel = { epic: "Epic", ikon: "Ikon", independent: "Indep." };
+
+  // Filter to visible mountains that have base depth data, sort desc
+  const ranked = MOUNTAINS
+    .filter(m => visibleIds.has(m.id) && m.live.snowDepth !== null)
+    .sort((a, b) => b.live.snowDepth - a.live.snowDepth)
+    .slice(0, 5);
+
+  if (ranked.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="7" class="top5-empty">No conditions data for visible mountains</td></tr>`;
+    return;
+  }
+
+  tbody.innerHTML = ranked.map((m, i) => {
+    const runs  = m.live.openRuns  !== null ? m.live.openRuns  : "—";
+    const lifts = m.live.openLifts !== null ? m.live.openLifts : "—";
+    return `<tr>
+      <td>${i + 1}</td>
+      <td>${m.name}</td>
+      <td>${m.state}</td>
+      <td><span class="top5-badge ${m.pass}">${passLabel[m.pass]}</span></td>
+      <td>${m.live.snowDepth}"</td>
+      <td>${runs}</td>
+      <td>${lifts}</td>
+    </tr>`;
+  }).join("");
+}
+
+// ============================================================
 // Legend
 // ============================================================
 function addLegend() {

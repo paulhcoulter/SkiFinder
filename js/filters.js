@@ -187,6 +187,7 @@ function applyFilters() {
   }
 
   updateMarkers(visibleIds);
+  updateTopTable(visibleIds);
 }
 
 // ============================================================
