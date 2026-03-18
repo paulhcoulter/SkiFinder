@@ -211,23 +211,15 @@ function updateTopTable(visibleIds) {
     .slice(0, 5);
 
   if (ranked.length === 0) {
-    tbody.innerHTML = `<tr><td colspan="7" class="top5-empty">No conditions data for visible mountains</td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="3" class="top5-empty">No data for visible mountains</td></tr>`;
     return;
   }
 
-  tbody.innerHTML = ranked.map((m, i) => {
-    const runs  = m.live.openRuns  !== null ? m.live.openRuns  : "—";
-    const lifts = m.live.openLifts !== null ? m.live.openLifts : "—";
-    return `<tr>
-      <td>${i + 1}</td>
-      <td>${m.name}</td>
-      <td>${m.state}</td>
-      <td><span class="top5-badge ${m.pass}">${passLabel[m.pass]}</span></td>
-      <td>${m.live.snowDepth}"</td>
-      <td>${runs}</td>
-      <td>${lifts}</td>
-    </tr>`;
-  }).join("");
+  tbody.innerHTML = ranked.map((m, i) => `<tr>
+    <td>${i + 1}</td>
+    <td>${m.name}</td>
+    <td>${m.live.snowDepth}"</td>
+  </tr>`).join("");
 }
 
 // ============================================================

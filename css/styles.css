@@ -277,18 +277,24 @@ body {
 }
 
 /* ============================================================
-   Top 5 Table
+   Top 5 Table (floating card, bottom-right)
    ============================================================ */
 #top5-container {
-  flex-shrink: 0;
-  background: rgba(13, 17, 23, 0.95);
-  border-top: 1px solid var(--border);
-  color: var(--text);
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 210px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+  z-index: 890;
+  overflow: hidden;
   font-size: 12px;
 }
 
 #top5-header {
-  padding: 7px 14px 5px;
+  padding: 8px 12px 6px;
   font-size: 10px;
   font-weight: 700;
   text-transform: uppercase;
@@ -298,12 +304,12 @@ body {
 }
 
 #top5-table {
-  width: auto;
+  width: 100%;
   border-collapse: collapse;
 }
 
 #top5-table thead th {
-  padding: 5px 10px;
+  padding: 4px 10px;
   font-size: 10px;
   font-weight: 600;
   text-transform: uppercase;
@@ -314,10 +320,8 @@ body {
   white-space: nowrap;
 }
 
-#top5-table thead th:first-child { width: 24px; text-align: center; padding-right: 6px; }
-#top5-table thead th:nth-child(5),
-#top5-table thead th:nth-child(6),
-#top5-table thead th:nth-child(7) { text-align: right; }
+#top5-table thead th:first-child { width: 20px; text-align: center; }
+#top5-table thead th:last-child   { text-align: right; }
 
 #top5-table tbody td {
   padding: 6px 10px;
@@ -338,34 +342,22 @@ body {
 #top5-table tbody td:nth-child(2) {
   font-weight: 600;
   color: var(--text);
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-#top5-table tbody td:nth-child(5),
-#top5-table tbody td:nth-child(6),
-#top5-table tbody td:nth-child(7) {
+#top5-table tbody td:last-child {
   text-align: right;
   font-weight: 700;
   color: #4fc3f7;
   font-variant-numeric: tabular-nums;
 }
 
-.top5-badge {
-  display: inline-block;
-  padding: 2px 7px;
-  border-radius: 20px;
-  font-size: 10px;
-  font-weight: 700;
-  color: #fff;
-  letter-spacing: 0.2px;
-}
-.top5-badge.epic        { background: #0057a8; }
-.top5-badge.ikon        { background: #a83240; }
-.top5-badge.independent { background: #4a7c4e; }
-
 .top5-empty {
   text-align: center;
   color: var(--text-dim);
-  padding: 12px;
+  padding: 10px;
   font-style: italic;
 }
 
@@ -612,4 +604,6 @@ body {
     width: auto;
     max-height: 50vh;
   }
+
+  #top5-container { display: none; }
 }
