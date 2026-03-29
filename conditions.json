@@ -1,159 +1,159 @@
 {
-  "updated": "2026-03-28T13:43:18.880Z",
+  "updated": "2026-03-29T13:45:01.040Z",
   "mountains": {
     "killington": {
       "baseDepth": 12,
       "summitDepth": 24,
       "recentSnow": 0,
       "openLifts": 17,
-      "openRuns": 81
+      "openRuns": 82
     },
     "stowe": {
       "baseDepth": 30,
       "summitDepth": 60,
-      "recentSnow": 4,
+      "recentSnow": 2,
       "openLifts": 8,
-      "openRuns": 72
+      "openRuns": 73
     },
     "sugarloaf": {
       "baseDepth": 20,
       "summitDepth": 30,
       "recentSnow": 1,
       "openLifts": 11,
-      "openRuns": 71
+      "openRuns": 79
     },
     "sunday-river": {
       "baseDepth": 20,
       "summitDepth": null,
-      "recentSnow": 9,
+      "recentSnow": 2,
       "openLifts": 9,
-      "openRuns": 94
+      "openRuns": 95
     },
     "loon": {
       "baseDepth": 48,
       "summitDepth": null,
-      "recentSnow": 4,
-      "openLifts": 12,
+      "recentSnow": 3,
+      "openLifts": 11,
       "openRuns": 56
     },
     "cannon": {
       "baseDepth": 16,
       "summitDepth": 30,
-      "recentSnow": 1,
+      "recentSnow": 8,
       "openLifts": 8,
       "openRuns": 44
     },
     "sugarbush": {
       "baseDepth": 12,
       "summitDepth": 42,
-      "recentSnow": 2,
+      "recentSnow": 0,
       "openLifts": 13,
-      "openRuns": 83
+      "openRuns": 78
     },
     "okemo": {
       "baseDepth": null,
       "summitDepth": null,
       "recentSnow": null,
-      "openLifts": 10,
-      "openRuns": 65
+      "openLifts": 17,
+      "openRuns": 84
     },
     "mount-snow": {
       "baseDepth": null,
       "summitDepth": null,
       "recentSnow": null,
-      "openLifts": 5,
-      "openRuns": 29
+      "openLifts": 8,
+      "openRuns": 10
     },
     "stratton": {
       "baseDepth": 22,
       "summitDepth": null,
       "recentSnow": 0,
       "openLifts": 12,
-      "openRuns": 47
+      "openRuns": 54
     },
     "jay-peak": {
       "baseDepth": 16,
       "summitDepth": 40,
       "recentSnow": null,
       "openLifts": 9,
-      "openRuns": 82
+      "openRuns": 36
     },
     "smugglers-notch": {
       "baseDepth": 16,
       "summitDepth": 56,
       "recentSnow": null,
       "openLifts": 6,
-      "openRuns": 45
+      "openRuns": 51
     },
     "wildcat": {
       "baseDepth": null,
       "summitDepth": null,
       "recentSnow": null,
-      "openLifts": 3,
-      "openRuns": 12
+      "openLifts": 4,
+      "openRuns": 18
     },
     "attitash": {
       "baseDepth": 15,
       "summitDepth": 30,
       "recentSnow": null,
-      "openLifts": 6,
-      "openRuns": 49
+      "openLifts": 7,
+      "openRuns": 46
     },
     "mount-sunapee": {
       "baseDepth": null,
       "summitDepth": null,
       "recentSnow": null,
-      "openLifts": 5,
-      "openRuns": 42
+      "openLifts": 6,
+      "openRuns": 45
     },
     "waterville-valley": {
       "baseDepth": 18,
       "summitDepth": 24,
-      "recentSnow": 4,
+      "recentSnow": 3,
       "openLifts": 6,
       "openRuns": 60
     },
     "bretton-woods": {
       "baseDepth": 18,
       "summitDepth": 36,
-      "recentSnow": 0,
+      "recentSnow": 5,
       "openLifts": 5,
-      "openRuns": 32
+      "openRuns": 37
     },
     "crotched": {
       "baseDepth": null,
       "summitDepth": null,
       "recentSnow": null,
       "openLifts": 3,
-      "openRuns": 20
+      "openRuns": 17
     },
     "jiminy-peak": {
       "baseDepth": 15,
       "summitDepth": 40,
-      "recentSnow": 0,
+      "recentSnow": null,
       "openLifts": 4,
       "openRuns": 32
     },
     "berkshire-east": {
       "baseDepth": 18,
-      "summitDepth": 36,
+      "summitDepth": 22,
       "recentSnow": null,
       "openLifts": 3,
-      "openRuns": 30
+      "openRuns": 28
     },
     "bolton-valley": {
       "baseDepth": 25,
       "summitDepth": 40,
       "recentSnow": null,
       "openLifts": 6,
-      "openRuns": 57
+      "openRuns": 37
     },
     "mad-river-glen": {
       "baseDepth": 30,
       "summitDepth": 46,
       "recentSnow": null,
-      "openLifts": 3,
-      "openRuns": 27
+      "openLifts": 4,
+      "openRuns": 26
     },
     "mohawk": {
       "baseDepth": null,
@@ -163,11 +163,11 @@
       "openRuns": null
     },
     "ski-sundown": {
-      "baseDepth": 25,
-      "summitDepth": 30,
-      "recentSnow": null,
+      "baseDepth": 12,
+      "summitDepth": 20,
+      "recentSnow": 0,
       "openLifts": null,
-      "openRuns": null
+      "openRuns": 17
     },
     "yawgoo": {
       "baseDepth": null,
