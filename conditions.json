@@ -1,32 +1,32 @@
 {
-  "updated": "2026-04-02T14:16:34.630Z",
+  "updated": "2026-04-03T13:56:40.738Z",
   "mountains": {
     "killington": {
       "baseDepth": 12,
       "summitDepth": 24,
       "recentSnow": 0,
-      "openLifts": 12,
-      "openRuns": 94
+      "openLifts": 16,
+      "openRuns": 83
     },
     "stowe": {
       "baseDepth": 30,
       "summitDepth": 60,
-      "recentSnow": 0,
+      "recentSnow": 1,
       "openLifts": 8,
-      "openRuns": 64
+      "openRuns": 63
     },
     "sugarloaf": {
       "baseDepth": 15,
       "summitDepth": 25,
       "recentSnow": 0,
-      "openLifts": 8,
-      "openRuns": 52
+      "openLifts": 5,
+      "openRuns": 47
     },
     "sunday-river": {
       "baseDepth": 20,
       "summitDepth": null,
       "recentSnow": 0,
-      "openLifts": 3,
+      "openLifts": null,
       "openRuns": 51
     },
     "loon": {
@@ -40,47 +40,47 @@
       "baseDepth": 16,
       "summitDepth": 30,
       "recentSnow": 0,
-      "openLifts": 3,
-      "openRuns": 18
+      "openLifts": 6,
+      "openRuns": 34
     },
     "sugarbush": {
       "baseDepth": 12,
       "summitDepth": 42,
-      "recentSnow": 0,
+      "recentSnow": 1,
       "openLifts": 6,
-      "openRuns": 35
+      "openRuns": 34
     },
     "okemo": {
       "baseDepth": null,
       "summitDepth": null,
       "recentSnow": 0,
       "openLifts": 8,
-      "openRuns": 67
+      "openRuns": 66
     },
     "mount-snow": {
       "baseDepth": null,
       "summitDepth": null,
       "recentSnow": 0,
-      "openLifts": 2,
-      "openRuns": 16
+      "openLifts": 3,
+      "openRuns": 13
     },
     "stratton": {
-      "baseDepth": 22,
+      "baseDepth": 20,
       "summitDepth": null,
       "recentSnow": 0,
-      "openLifts": 4,
-      "openRuns": 21
+      "openLifts": 3,
+      "openRuns": 32
     },
     "jay-peak": {
       "baseDepth": 16,
       "summitDepth": 40,
-      "recentSnow": 2,
-      "openLifts": 7,
-      "openRuns": 56
+      "recentSnow": 0,
+      "openLifts": 6,
+      "openRuns": 49
     },
     "smugglers-notch": {
-      "baseDepth": 14,
-      "summitDepth": 54,
+      "baseDepth": 12,
+      "summitDepth": 52,
       "recentSnow": null,
       "openLifts": 4,
       "openRuns": 31
@@ -90,14 +90,14 @@
       "summitDepth": null,
       "recentSnow": 0,
       "openLifts": 2,
-      "openRuns": 8
+      "openRuns": 13
     },
     "attitash": {
       "baseDepth": 15,
       "summitDepth": 30,
       "recentSnow": 0,
-      "openLifts": 1,
-      "openRuns": 30
+      "openLifts": 4,
+      "openRuns": 36
     },
     "mount-sunapee": {
       "baseDepth": null,
@@ -110,7 +110,7 @@
       "baseDepth": 12,
       "summitDepth": 24,
       "recentSnow": 0,
-      "openLifts": 5,
+      "openLifts": 4,
       "openRuns": 58
     },
     "bretton-woods": {
@@ -128,11 +128,11 @@
       "openRuns": null
     },
     "jiminy-peak": {
-      "baseDepth": 15,
-      "summitDepth": 40,
-      "recentSnow": null,
-      "openLifts": 4,
-      "openRuns": 32
+      "baseDepth": 10,
+      "summitDepth": 24,
+      "recentSnow": 0,
+      "openLifts": 3,
+      "openRuns": 21
     },
     "berkshire-east": {
       "baseDepth": 18,
