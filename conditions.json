@@ -1,26 +1,26 @@
 {
-  "updated": "2026-04-07T14:26:31.208Z",
+  "updated": "2026-04-08T14:28:20.052Z",
   "mountains": {
     "killington": {
       "baseDepth": 10,
       "summitDepth": 21,
       "recentSnow": 0,
-      "openLifts": 8,
-      "openRuns": 68
+      "openLifts": 10,
+      "openRuns": 63
     },
     "stowe": {
       "baseDepth": 18,
       "summitDepth": 48,
       "recentSnow": 0,
       "openLifts": 2,
-      "openRuns": 42
+      "openRuns": 45
     },
     "sugarloaf": {
       "baseDepth": 15,
       "summitDepth": 25,
-      "recentSnow": 0,
+      "recentSnow": 2,
       "openLifts": 8,
-      "openRuns": 57
+      "openRuns": 70
     },
     "sunday-river": {
       "baseDepth": 20,
@@ -34,14 +34,14 @@
       "summitDepth": null,
       "recentSnow": 0,
       "openLifts": 3,
-      "openRuns": 27
+      "openRuns": 31
     },
     "cannon": {
       "baseDepth": 16,
       "summitDepth": 30,
       "recentSnow": 0,
       "openLifts": 4,
-      "openRuns": 27
+      "openRuns": 26
     },
     "sugarbush": {
       "baseDepth": 12,
@@ -55,7 +55,7 @@
       "summitDepth": null,
       "recentSnow": 0,
       "openLifts": 3,
-      "openRuns": 42
+      "openRuns": 45
     },
     "mount-snow": {
       "baseDepth": null,
@@ -75,13 +75,13 @@
       "baseDepth": 16,
       "summitDepth": 40,
       "recentSnow": 0,
-      "openLifts": 9,
-      "openRuns": 48
+      "openLifts": 8,
+      "openRuns": 68
     },
     "smugglers-notch": {
       "baseDepth": 12,
       "summitDepth": 52,
-      "recentSnow": 0,
+      "recentSnow": null,
       "openLifts": 1,
       "openRuns": 11
     },
@@ -111,14 +111,14 @@
       "summitDepth": 18,
       "recentSnow": null,
       "openLifts": 3,
-      "openRuns": 46
+      "openRuns": 53
     },
     "bretton-woods": {
       "baseDepth": 10,
       "summitDepth": 24,
       "recentSnow": 0,
       "openLifts": 2,
-      "openRuns": 10
+      "openRuns": 13
     },
     "crotched": {
       "baseDepth": null,
@@ -145,8 +145,8 @@
       "baseDepth": 25,
       "summitDepth": 40,
       "recentSnow": 0,
-      "openLifts": null,
-      "openRuns": null
+      "openLifts": 2,
+      "openRuns": 9
     },
     "mad-river-glen": {
       "baseDepth": null,
