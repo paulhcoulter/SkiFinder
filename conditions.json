@@ -1,33 +1,33 @@
 {
-  "updated": "2026-04-09T14:49:45.103Z",
+  "updated": "2026-04-10T14:10:10.958Z",
   "mountains": {
     "killington": {
       "baseDepth": 10,
       "summitDepth": 21,
       "recentSnow": 0,
-      "openLifts": 8,
-      "openRuns": 70
+      "openLifts": 11,
+      "openRuns": 71
     },
     "stowe": {
       "baseDepth": 18,
       "summitDepth": 48,
       "recentSnow": 0,
       "openLifts": 2,
-      "openRuns": 54
+      "openRuns": 60
     },
     "sugarloaf": {
       "baseDepth": 15,
       "summitDepth": 25,
       "recentSnow": 0,
       "openLifts": 8,
-      "openRuns": 97
+      "openRuns": 100
     },
     "sunday-river": {
       "baseDepth": 20,
       "summitDepth": null,
-      "recentSnow": null,
-      "openLifts": null,
-      "openRuns": 63
+      "recentSnow": 0,
+      "openLifts": 1,
+      "openRuns": 15
     },
     "loon": {
       "baseDepth": 48,
@@ -41,21 +41,21 @@
       "summitDepth": 30,
       "recentSnow": 0,
       "openLifts": 4,
-      "openRuns": 27
+      "openRuns": 29
     },
     "sugarbush": {
       "baseDepth": 12,
       "summitDepth": 42,
       "recentSnow": 0,
       "openLifts": 5,
-      "openRuns": 33
+      "openRuns": 34
     },
     "okemo": {
       "baseDepth": null,
       "summitDepth": null,
       "recentSnow": 0,
-      "openLifts": 3,
-      "openRuns": 45
+      "openLifts": 2,
+      "openRuns": 44
     },
     "mount-snow": {
       "baseDepth": null,
@@ -68,22 +68,22 @@
       "baseDepth": 16,
       "summitDepth": 20,
       "recentSnow": 0,
-      "openLifts": 3,
-      "openRuns": 28
+      "openLifts": 4,
+      "openRuns": 30
     },
     "jay-peak": {
       "baseDepth": 16,
       "summitDepth": 40,
       "recentSnow": 0,
-      "openLifts": 7,
-      "openRuns": 68
+      "openLifts": 9,
+      "openRuns": 69
     },
     "smugglers-notch": {
       "baseDepth": 12,
       "summitDepth": 52,
       "recentSnow": 0,
       "openLifts": 1,
-      "openRuns": 18
+      "openRuns": 17
     },
     "wildcat": {
       "baseDepth": null,
@@ -109,7 +109,7 @@
     "waterville-valley": {
       "baseDepth": 12,
       "summitDepth": 18,
-      "recentSnow": 0,
+      "recentSnow": null,
       "openLifts": 3,
       "openRuns": 53
     },
@@ -146,7 +146,7 @@
       "summitDepth": 40,
       "recentSnow": 0,
       "openLifts": 2,
-      "openRuns": 11
+      "openRuns": 13
     },
     "mad-river-glen": {
       "baseDepth": null,
