@@ -1,26 +1,26 @@
 {
-  "updated": "2026-04-13T14:27:55.529Z",
+  "updated": "2026-04-14T14:46:20.443Z",
   "mountains": {
     "killington": {
       "baseDepth": 10,
       "summitDepth": 21,
       "recentSnow": 0,
       "openLifts": 5,
-      "openRuns": 43
+      "openRuns": 42
     },
     "stowe": {
       "baseDepth": 18,
       "summitDepth": 48,
-      "recentSnow": 1,
+      "recentSnow": 0,
       "openLifts": 2,
       "openRuns": 58
     },
     "sugarloaf": {
-      "baseDepth": 15,
-      "summitDepth": 25,
-      "recentSnow": 3,
+      "baseDepth": null,
+      "summitDepth": 15,
+      "recentSnow": 0,
       "openLifts": 3,
-      "openRuns": 72
+      "openRuns": 63
     },
     "sunday-river": {
       "baseDepth": 20,
@@ -32,23 +32,23 @@
     "loon": {
       "baseDepth": 48,
       "summitDepth": null,
-      "recentSnow": 1,
+      "recentSnow": 0,
       "openLifts": 3,
-      "openRuns": 32
+      "openRuns": 26
     },
     "cannon": {
       "baseDepth": null,
       "summitDepth": null,
-      "recentSnow": 0,
+      "recentSnow": null,
       "openLifts": null,
       "openRuns": null
     },
     "sugarbush": {
       "baseDepth": 12,
       "summitDepth": 42,
-      "recentSnow": 3,
+      "recentSnow": 0,
       "openLifts": 2,
-      "openRuns": 22
+      "openRuns": 21
     },
     "okemo": {
       "baseDepth": null,
@@ -67,28 +67,28 @@
     "stratton": {
       "baseDepth": null,
       "summitDepth": null,
-      "recentSnow": 0,
+      "recentSnow": null,
       "openLifts": null,
       "openRuns": null
     },
     "jay-peak": {
       "baseDepth": 16,
       "summitDepth": 40,
-      "recentSnow": 4,
-      "openLifts": 6,
-      "openRuns": 65
+      "recentSnow": 0,
+      "openLifts": 8,
+      "openRuns": 57
     },
     "smugglers-notch": {
       "baseDepth": null,
       "summitDepth": null,
-      "recentSnow": 0,
+      "recentSnow": null,
       "openLifts": null,
       "openRuns": null
     },
     "wildcat": {
       "baseDepth": null,
       "summitDepth": null,
-      "recentSnow": 0,
+      "recentSnow": null,
       "openLifts": null,
       "openRuns": null
     },
@@ -109,14 +109,14 @@
     "waterville-valley": {
       "baseDepth": null,
       "summitDepth": null,
-      "recentSnow": 0,
+      "recentSnow": null,
       "openLifts": null,
       "openRuns": null
     },
     "bretton-woods": {
       "baseDepth": null,
       "summitDepth": null,
-      "recentSnow": 4,
+      "recentSnow": null,
       "openLifts": null,
       "openRuns": null
     },
@@ -144,7 +144,7 @@
     "bolton-valley": {
       "baseDepth": null,
       "summitDepth": null,
-      "recentSnow": 4,
+      "recentSnow": null,
       "openLifts": null,
       "openRuns": null
     },
