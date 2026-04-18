@@ -1,19 +1,19 @@
 {
-  "updated": "2026-04-17T14:16:04.963Z",
+  "updated": "2026-04-18T13:55:00.295Z",
   "mountains": {
     "killington": {
       "baseDepth": 10,
-      "summitDepth": 20,
+      "summitDepth": 18,
       "recentSnow": 0,
-      "openLifts": 5,
-      "openRuns": 33
+      "openLifts": 6,
+      "openRuns": 23
     },
     "stowe": {
       "baseDepth": 12,
       "summitDepth": 42,
-      "recentSnow": 0,
+      "recentSnow": 1,
       "openLifts": 2,
-      "openRuns": 38
+      "openRuns": 40
     },
     "sugarloaf": {
       "baseDepth": null,
@@ -26,7 +26,7 @@
       "baseDepth": 20,
       "summitDepth": null,
       "recentSnow": 0,
-      "openLifts": null,
+      "openLifts": 1,
       "openRuns": 15
     },
     "loon": {
@@ -34,7 +34,7 @@
       "summitDepth": null,
       "recentSnow": 0,
       "openLifts": 3,
-      "openRuns": 19
+      "openRuns": 18
     },
     "cannon": {
       "baseDepth": null,
@@ -53,7 +53,7 @@
     "okemo": {
       "baseDepth": null,
       "summitDepth": null,
-      "recentSnow": 0,
+      "recentSnow": null,
       "openLifts": null,
       "openRuns": null
     },
@@ -62,7 +62,7 @@
       "summitDepth": null,
       "recentSnow": 0,
       "openLifts": 1,
-      "openRuns": 5
+      "openRuns": 1
     },
     "stratton": {
       "baseDepth": null,
@@ -75,8 +75,8 @@
       "baseDepth": 16,
       "summitDepth": 40,
       "recentSnow": 0,
-      "openLifts": 8,
-      "openRuns": 32
+      "openLifts": 7,
+      "openRuns": 26
     },
     "smugglers-notch": {
       "baseDepth": null,
