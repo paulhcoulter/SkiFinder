@@ -1,17 +1,17 @@
 {
-  "updated": "2026-04-20T14:28:02.397Z",
+  "updated": "2026-04-21T14:29:47.740Z",
   "mountains": {
     "killington": {
       "baseDepth": 10,
       "summitDepth": 18,
-      "recentSnow": 0,
+      "recentSnow": null,
       "openLifts": 1,
       "openRuns": 7
     },
     "stowe": {
       "baseDepth": 12,
       "summitDepth": 36,
-      "recentSnow": 0,
+      "recentSnow": null,
       "openLifts": 1,
       "openRuns": 20
     },
@@ -75,7 +75,7 @@
       "baseDepth": 16,
       "summitDepth": 40,
       "recentSnow": 0,
-      "openLifts": 5,
+      "openLifts": 7,
       "openRuns": 25
     },
     "smugglers-notch": {
