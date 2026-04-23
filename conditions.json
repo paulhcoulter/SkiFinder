@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-22T14:29:29.275Z",
+  "updated": "2026-04-23T15:07:17.697Z",
   "mountains": {
     "killington": {
       "baseDepth": 10,
@@ -18,9 +18,9 @@
     "sugarloaf": {
       "baseDepth": null,
       "summitDepth": 12,
-      "recentSnow": null,
+      "recentSnow": 0,
       "openLifts": 2,
-      "openRuns": 10
+      "openRuns": 32
     },
     "sunday-river": {
       "baseDepth": null,
@@ -76,7 +76,7 @@
       "summitDepth": 40,
       "recentSnow": 0,
       "openLifts": 8,
-      "openRuns": 22
+      "openRuns": 21
     },
     "smugglers-notch": {
       "baseDepth": null,
