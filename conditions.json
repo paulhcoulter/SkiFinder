@@ -1,26 +1,26 @@
 {
-  "updated": "2026-04-23T15:07:17.697Z",
+  "updated": "2026-04-24T14:28:30.088Z",
   "mountains": {
     "killington": {
       "baseDepth": 10,
       "summitDepth": 18,
-      "recentSnow": 0,
+      "recentSnow": 2,
       "openLifts": 1,
       "openRuns": 7
     },
     "stowe": {
       "baseDepth": 12,
       "summitDepth": 36,
-      "recentSnow": 0,
+      "recentSnow": 3,
       "openLifts": 1,
-      "openRuns": 21
+      "openRuns": 20
     },
     "sugarloaf": {
       "baseDepth": null,
       "summitDepth": 12,
       "recentSnow": 0,
       "openLifts": 2,
-      "openRuns": 32
+      "openRuns": 30
     },
     "sunday-river": {
       "baseDepth": null,
