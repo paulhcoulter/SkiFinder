@@ -1,10 +1,10 @@
 {
-  "updated": "2026-04-24T14:28:30.088Z",
+  "updated": "2026-04-25T13:57:14.781Z",
   "mountains": {
     "killington": {
       "baseDepth": 10,
       "summitDepth": 18,
-      "recentSnow": 2,
+      "recentSnow": 0,
       "openLifts": 1,
       "openRuns": 7
     },
@@ -13,12 +13,12 @@
       "summitDepth": 36,
       "recentSnow": 3,
       "openLifts": 1,
-      "openRuns": 20
+      "openRuns": 23
     },
     "sugarloaf": {
       "baseDepth": null,
       "summitDepth": 12,
-      "recentSnow": 0,
+      "recentSnow": null,
       "openLifts": 2,
       "openRuns": 30
     },
@@ -46,7 +46,7 @@
     "sugarbush": {
       "baseDepth": 12,
       "summitDepth": 42,
-      "recentSnow": 0,
+      "recentSnow": 4,
       "openLifts": 1,
       "openRuns": 6
     },
@@ -74,7 +74,7 @@
     "jay-peak": {
       "baseDepth": 16,
       "summitDepth": 40,
-      "recentSnow": 0,
+      "recentSnow": 6,
       "openLifts": 8,
       "openRuns": 21
     },
