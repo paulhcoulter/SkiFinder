@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-25T13:57:14.781Z",
+  "updated": "2026-04-26T13:59:03.303Z",
   "mountains": {
     "killington": {
       "baseDepth": 10,
@@ -11,7 +11,7 @@
     "stowe": {
       "baseDepth": 12,
       "summitDepth": 36,
-      "recentSnow": 3,
+      "recentSnow": null,
       "openLifts": 1,
       "openRuns": 23
     },
@@ -46,7 +46,7 @@
     "sugarbush": {
       "baseDepth": 12,
       "summitDepth": 42,
-      "recentSnow": 4,
+      "recentSnow": 0,
       "openLifts": 1,
       "openRuns": 6
     },
@@ -74,8 +74,8 @@
     "jay-peak": {
       "baseDepth": 16,
       "summitDepth": 40,
-      "recentSnow": 6,
-      "openLifts": 8,
+      "recentSnow": 0,
+      "openLifts": 6,
       "openRuns": 21
     },
     "smugglers-notch": {
