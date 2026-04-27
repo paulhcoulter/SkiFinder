@@ -1,26 +1,26 @@
 {
-  "updated": "2026-04-26T13:59:03.303Z",
+  "updated": "2026-04-27T14:56:10.259Z",
   "mountains": {
     "killington": {
       "baseDepth": 10,
       "summitDepth": 18,
-      "recentSnow": 0,
+      "recentSnow": null,
       "openLifts": 1,
       "openRuns": 7
     },
     "stowe": {
-      "baseDepth": 12,
-      "summitDepth": 36,
-      "recentSnow": null,
-      "openLifts": 1,
-      "openRuns": 23
+      "baseDepth": null,
+      "summitDepth": null,
+      "recentSnow": 0,
+      "openLifts": null,
+      "openRuns": null
     },
     "sugarloaf": {
       "baseDepth": null,
-      "summitDepth": 12,
+      "summitDepth": null,
       "recentSnow": null,
-      "openLifts": 2,
-      "openRuns": 30
+      "openLifts": null,
+      "openRuns": null
     },
     "sunday-river": {
       "baseDepth": null,
@@ -47,8 +47,8 @@
       "baseDepth": 12,
       "summitDepth": 42,
       "recentSnow": 0,
-      "openLifts": 1,
-      "openRuns": 6
+      "openLifts": null,
+      "openRuns": null
     },
     "okemo": {
       "baseDepth": null,
@@ -75,8 +75,8 @@
       "baseDepth": 16,
       "summitDepth": 40,
       "recentSnow": 0,
-      "openLifts": 6,
-      "openRuns": 21
+      "openLifts": 4,
+      "openRuns": 18
     },
     "smugglers-notch": {
       "baseDepth": null,
