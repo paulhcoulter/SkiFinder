@@ -1,10 +1,10 @@
 {
-  "updated": "2026-04-29T15:01:44.322Z",
+  "updated": "2026-04-30T14:58:38.759Z",
   "mountains": {
     "killington": {
       "baseDepth": 10,
       "summitDepth": 18,
-      "recentSnow": null,
+      "recentSnow": 0,
       "openLifts": 1,
       "openRuns": 7
     },
