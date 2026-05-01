@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-30T14:58:38.759Z",
+  "updated": "2026-05-01T14:13:05.341Z",
   "mountains": {
     "killington": {
       "baseDepth": 10,
@@ -76,7 +76,7 @@
       "summitDepth": 40,
       "recentSnow": 0,
       "openLifts": 4,
-      "openRuns": 16
+      "openRuns": 14
     },
     "smugglers-notch": {
       "baseDepth": null,
