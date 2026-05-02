@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-01T14:13:05.341Z",
+  "updated": "2026-05-02T14:04:46.269Z",
   "mountains": {
     "killington": {
       "baseDepth": 10,
@@ -45,10 +45,10 @@
     },
     "sugarbush": {
       "baseDepth": 12,
-      "summitDepth": 42,
+      "summitDepth": 36,
       "recentSnow": 0,
-      "openLifts": null,
-      "openRuns": null
+      "openLifts": 1,
+      "openRuns": 2
     },
     "okemo": {
       "baseDepth": null,
@@ -76,7 +76,7 @@
       "summitDepth": 40,
       "recentSnow": 0,
       "openLifts": 4,
-      "openRuns": 14
+      "openRuns": 7
     },
     "smugglers-notch": {
       "baseDepth": null,
