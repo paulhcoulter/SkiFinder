@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-04T15:02:35.115Z",
+  "updated": "2026-05-06T15:21:13.198Z",
   "mountains": {
     "killington": {
       "baseDepth": 10,
@@ -74,7 +74,7 @@
     "jay-peak": {
       "baseDepth": 16,
       "summitDepth": 40,
-      "recentSnow": 0,
+      "recentSnow": null,
       "openLifts": 4,
       "openRuns": 7
     },
