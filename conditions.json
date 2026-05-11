@@ -1,10 +1,10 @@
 {
-  "updated": "2026-05-10T14:15:59.371Z",
+  "updated": "2026-05-11T15:52:16.582Z",
   "mountains": {
     "killington": {
       "baseDepth": 10,
       "summitDepth": 18,
-      "recentSnow": 0,
+      "recentSnow": null,
       "openLifts": 1,
       "openRuns": 4
     },
@@ -46,7 +46,7 @@
     "sugarbush": {
       "baseDepth": null,
       "summitDepth": null,
-      "recentSnow": 0,
+      "recentSnow": null,
       "openLifts": null,
       "openRuns": null
     },
