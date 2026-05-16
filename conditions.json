@@ -1,10 +1,10 @@
 {
-  "updated": "2026-05-15T15:09:28.913Z",
+  "updated": "2026-05-16T14:18:20.768Z",
   "mountains": {
     "killington": {
       "baseDepth": 10,
       "summitDepth": 18,
-      "recentSnow": 0,
+      "recentSnow": null,
       "openLifts": 1,
       "openRuns": 4
     },
@@ -74,9 +74,9 @@
     "jay-peak": {
       "baseDepth": 12,
       "summitDepth": 36,
-      "recentSnow": null,
-      "openLifts": 1,
-      "openRuns": 1
+      "recentSnow": 0,
+      "openLifts": null,
+      "openRuns": null
     },
     "smugglers-notch": {
       "baseDepth": null,
