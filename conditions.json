@@ -1,12 +1,12 @@
 {
-  "updated": "2026-05-27T16:32:13.258Z",
+  "updated": "2026-05-28T16:47:07.554Z",
   "mountains": {
     "killington": {
-      "baseDepth": 24,
+      "baseDepth": null,
       "summitDepth": null,
-      "recentSnow": null,
-      "openLifts": 1,
-      "openRuns": 3
+      "recentSnow": 0,
+      "openLifts": null,
+      "openRuns": null
     },
     "stowe": {
       "baseDepth": null,
