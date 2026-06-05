@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-04T16:16:05.112Z",
+  "updated": "2026-06-05T15:48:35.511Z",
   "mountains": {
     "killington": {
       "baseDepth": null,
@@ -36,20 +36,8 @@
       "openLifts": null,
       "openRuns": null
     },
-    "cannon": {
-      "baseDepth": null,
-      "summitDepth": null,
-      "recentSnow": null,
-      "openLifts": null,
-      "openRuns": null
-    },
-    "sugarbush": {
-      "baseDepth": null,
-      "summitDepth": null,
-      "recentSnow": null,
-      "openLifts": null,
-      "openRuns": null
-    },
+    "cannon": null,
+    "sugarbush": null,
     "okemo": {
       "baseDepth": null,
       "summitDepth": null,
