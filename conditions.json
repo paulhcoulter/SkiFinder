@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-25T16:54:28.417Z",
+  "updated": "2026-10-26T18:55:48.724Z",
   "mountains": {
     "killington": {
       "baseDepth": null,
@@ -15,8 +15,20 @@
       "openLifts": null,
       "openRuns": null
     },
-    "sugarloaf": null,
-    "sunday-river": null,
+    "sugarloaf": {
+      "baseDepth": null,
+      "summitDepth": null,
+      "recentSnow": null,
+      "openLifts": null,
+      "openRuns": null
+    },
+    "sunday-river": {
+      "baseDepth": null,
+      "summitDepth": null,
+      "recentSnow": null,
+      "openLifts": null,
+      "openRuns": null
+    },
     "loon": {
       "baseDepth": null,
       "summitDepth": null,
