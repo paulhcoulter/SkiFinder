@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-17T21:26:19.448Z",
+  "updated": "2026-11-18T20:58:42.315Z",
   "mountains": {
     "killington": {
       "baseDepth": null,
@@ -141,34 +141,10 @@
       "openLifts": null,
       "openRuns": null
     },
-    "bolton-valley": {
-      "baseDepth": null,
-      "summitDepth": null,
-      "recentSnow": null,
-      "openLifts": null,
-      "openRuns": null
-    },
-    "mad-river-glen": {
-      "baseDepth": null,
-      "summitDepth": null,
-      "recentSnow": null,
-      "openLifts": null,
-      "openRuns": null
-    },
-    "mohawk": {
-      "baseDepth": null,
-      "summitDepth": null,
-      "recentSnow": null,
-      "openLifts": null,
-      "openRuns": null
-    },
-    "ski-sundown": {
-      "baseDepth": null,
-      "summitDepth": null,
-      "recentSnow": null,
-      "openLifts": null,
-      "openRuns": null
-    },
+    "bolton-valley": null,
+    "mad-river-glen": null,
+    "mohawk": null,
+    "ski-sundown": null,
     "yawgoo": {
       "baseDepth": null,
       "summitDepth": null,
